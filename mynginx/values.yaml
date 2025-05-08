@@ -1,0 +1,4 @@
+
+identity_key: "my-app-id"
+image: "nginxdemos/hello:latest"
+port: 80
