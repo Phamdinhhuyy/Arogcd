@@ -8,15 +8,21 @@ spec:
   source:
     repoURL: https://github.com/Phamdinhhuyy/Arogcd.git
     targetRevision: HEAD
-    path: mynginx/templates
+    path: mynginx/template
+    helm:
+      valueFiles:
+        - values.yaml
+      parameters:
+        - name: image
+          value: "nginx:latest"
+  destination:
     server: https://kubernetes.default.svc
     namespace: argocd-demo
-
   syncPolicy:
     syncOptions:
       - CreateNamespace=true
-
     automated:
       selfHeal: true
       prune: true
+
 
