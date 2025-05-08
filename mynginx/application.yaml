@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: https://github.com/Phamdinhhuyy/Arogcd.git
     targetRevision: HEAD
-    path: mynginx/template
+    path: mynginx/templates
     helm:
       valueFiles:
         - values.yaml
